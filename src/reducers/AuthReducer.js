@@ -1,9 +1,10 @@
 const INITIAL_STATE = {
-    email: '',
-    password: '',
+    email: 'aaa@aaa.aaa',
+    password: '1234aA',
     user: null,
     loading: false
 }
+
 import {
     EMAIL_CHANGED,
     PASSWORD_CHANGED,

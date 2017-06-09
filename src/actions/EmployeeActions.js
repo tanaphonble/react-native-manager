@@ -28,9 +28,11 @@ export const employeeCreate = ({ name, phone, shift }) => {
 
 export const employeesFetch = () => {
     const { currentUser } = firebase.auth()
+
     return (dispatch) => {
-        firebase.database().ref(`/users/${currentUser}/employees`)
+        firebase.database().ref(`/users/${currentUser.uid}/employees`)
             .on('value', snapshot => {
+                console.log('snap', snapshot.val())
                 dispatch({ type: EMPLOYEES_FETCH_SUCCESS, payload: snapshot.val() })
             })
     }
