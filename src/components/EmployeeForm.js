@@ -7,7 +7,6 @@ import { CardSection, Input } from './common'
 
 class EmployeeForm extends Component {
     render() {
-        console.log('E F this.props', this.props)
         return (
             <View>
                 <CardSection>
